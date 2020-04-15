@@ -8,13 +8,11 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -57,6 +55,10 @@ public class BooksAvailable_COE extends AppCompatActivity {
     DatabaseReference databaseReference;
     @BindView(R.id.searchbooks)
     ImageView searchbooks;
+    @BindView(R.id.signout)
+    Button signout;
+
+    BooksAddedAdapter booksAddedAdapter;
 
     private BooksAddedAdapter mAdapter;
     // Layout manager is necessary because we need to display list of books vertically
@@ -118,8 +120,8 @@ public class BooksAvailable_COE extends AppCompatActivity {
                 }
                 progressDialog.dismiss();
 
-                    BooksAddedAdapter booksAddedAdapter = new BooksAddedAdapter(BooksAvailable_COE.this, bookDetailslist);
-                    RecyclerBACOE.setAdapter(booksAddedAdapter);
+                booksAddedAdapter = new BooksAddedAdapter(BooksAvailable_COE.this, bookDetailslist);
+                RecyclerBACOE.setAdapter(booksAddedAdapter);
 
             }
 
@@ -186,9 +188,9 @@ public class BooksAvailable_COE extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.example_menu,menu);
+        inflater.inflate(R.menu.example_menu, menu);
         MenuItem menuItem = menu.findItem(R.id.search_book);
-        SearchView searchView = (SearchView)menuItem.getActionView();
+        SearchView searchView = (SearchView) menuItem.getActionView();
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -198,11 +200,21 @@ public class BooksAvailable_COE extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                mAdapter=new BooksAddedAdapter();
-                mAdapter.getFilter().filter(newText);
+               // mAdapter = new BooksAddedAdapter();
+                booksAddedAdapter.getFilter().filter(newText);
                 return false;
             }
         });
         return true;
+    }
+
+    @OnClick(R.id.signout)
+    public void onViewClicked() {
+
+        editor.putBoolean("LoginStatus",false);
+        editor.commit();
+        Intent itologin = new Intent(BooksAvailable_COE.this,LoginActivity.class);
+        startActivity(itologin);
+        finish();
     }
 }

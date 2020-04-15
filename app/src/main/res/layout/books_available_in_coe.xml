@@ -7,13 +7,13 @@
 
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_BACOE"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar_BACOE"
         android:background="@android:color/holo_blue_bright">
+
+
     </androidx.appcompat.widget.Toolbar>
-
-
 
     <FrameLayout
 
@@ -47,11 +47,23 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_mic_pink"
+            android:src="@drawable/ic_mic_blue"
             android:layout_margin="10dp"
             android:id="@+id/searchbooks"
             android:onClick="getSpeechInput"
             android:layout_gravity="bottom|center"
+            />
+        <Button
+            android:id="@+id/signout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_bright"
+            android:text="SIGN OUT"
+            android:textColor="@android:color/white"
+            android:textSize="17dp"
+            android:layout_gravity="right|top"
+            android:layout_margin="5dp"
+
             />
 
 

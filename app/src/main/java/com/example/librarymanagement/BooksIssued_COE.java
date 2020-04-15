@@ -71,7 +71,7 @@ public class BooksIssued_COE extends AppCompatActivity {
         });
 
         progressDialog=new ProgressDialog(this);
-        progressDialog.setMessage("Reading notes...");
+        progressDialog.setMessage("Reading Books...");
 
 
         firebaseAuth=FirebaseAuth.getInstance();

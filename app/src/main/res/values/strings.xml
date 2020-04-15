@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LibraryManagement</string>
+    <string name="app_name">Library</string>
     <string name="welcome">WELCOME TO LIBRARY</string>
     <string name="branch">BRANCHES</string>
     <string name="your_branch">Select your branch</string>
