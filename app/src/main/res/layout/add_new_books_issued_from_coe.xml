@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_bright"
+        android:id="@+id/toolbar_BIDNCOE">
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:id="@+id/framelayout_BIDNCOE"
+        android:padding="25dp"
+        android:orientation="vertical"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:hint="Book name"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/holo_red_dark"
+            android:id="@+id/book_name_BIDNCOE" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Author name"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/book_author_name_BIDNCOE" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Publisher"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/book_publisher_BIDNCOE" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Account number"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textColorHint="@android:color/holo_green_light"
+            android:id="@+id/book_accNo_BIDNCOE"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Isbn"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/book_isbn_BIDNCOE" />
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="d_id"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/book_d_id_BIDNCOE" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Borrower"
+            android:gravity="center"
+            android:textColorHint="@android:color/holo_green_light"
+            android:textSize="18dp"
+            android:textColor="@android:color/black"
+            android:id="@+id/book_borrower_BIDNCOE" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:text="ADD BOOKS ISSUED"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/background_curve"
+            android:id="@+id/addBooksIssuedButton_BIDNCOE"/>
+
+    </LinearLayout>
+
+</LinearLayout>

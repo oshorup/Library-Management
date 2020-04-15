@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+android:background="@drawable/welcom"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/branch"
+            android:gravity="center"
+            android:textSize="40sp"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/white"/>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/coe"
+            android:layout_marginTop="70dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:id="@+id/computer_science"
+            android:background="@drawable/back_curve"
+
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ece"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:id="@+id/electronics"
+            android:background="@drawable/back_curve"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/IT"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:id="@+id/information_technology"
+            android:background="@drawable/back_curve"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sft"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:id="@+id/software_engineering"
+            android:background="@drawable/back_curve"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
