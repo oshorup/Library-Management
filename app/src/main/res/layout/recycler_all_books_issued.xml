@@ -101,6 +101,7 @@
                 android:id="@+id/image_row_edit_issued"
                 android:src="@drawable/ic_mode_edit_24dp"
                 android:layout_marginRight="25dp"
+                android:visibility="invisible"
                 />
             <ImageView
                 android:id="@+id/image_row_delete_issued"

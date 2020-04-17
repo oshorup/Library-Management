@@ -16,6 +16,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,7 +35,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class BooksIssued_COE extends AppCompatActivity {
+public class BooksIssued_COE extends AppCompatActivity implements UpdateBookDetailsIssued {
 
     @BindView(R.id.toolbar_BIDCOE)
     Toolbar toolbarBIDCOE;
@@ -131,5 +133,21 @@ public class BooksIssued_COE extends AppCompatActivity {
     public void onViewClicked() {
         Intent ItBIDNCOE = new Intent(BooksIssued_COE.this,BooksTobeIssuedToBorrower_COE.class);
         startActivity(ItBIDNCOE);
+    }
+
+    @Override
+    public void deleteIssuedBooks(BookDetailsISSUED bookDetailsISSUED) {
+        databaseReference.child(bookDetailsISSUED.getKeyISD()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(BooksIssued_COE.this,"Issued book deleted successfully",Toast.LENGTH_SHORT).show();
+                    readingIssuedBooks();
+                }
+            }
+        });
+
     }
 }

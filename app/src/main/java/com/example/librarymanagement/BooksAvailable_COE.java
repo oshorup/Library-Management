@@ -24,6 +24,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,7 +41,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class BooksAvailable_COE extends AppCompatActivity {
+public class BooksAvailable_COE extends AppCompatActivity implements UpdateBookDetails {
     @BindView(R.id.toolbar_BACOE)
     Toolbar toolbarBACOE;
     @BindView(R.id.Recycler_BACOE)
@@ -216,5 +218,34 @@ public class BooksAvailable_COE extends AppCompatActivity {
         Intent itologin = new Intent(BooksAvailable_COE.this,LoginActivity.class);
         startActivity(itologin);
         finish();
+    }
+
+    @Override
+    public void updatebook(BookDetails bookDetails) {
+        databaseReference.child(bookDetails.getAcc_n()).setValue(bookDetails).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(BooksAvailable_COE.this,"Book Details updated successfully",Toast.LENGTH_SHORT).show();
+                    readingBooks(); // because after updation we have to call the readingBooks function
+                }
+            }
+        });
+    }
+
+    @Override
+    public void deletebook(BookDetails bookDetails) {
+        databaseReference.child(bookDetails.getAcc_n()).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(BooksAvailable_COE.this,"Book deleted successfully",Toast.LENGTH_SHORT).show();
+                    readingBooks();
+                }
+            }
+        });
     }
 }

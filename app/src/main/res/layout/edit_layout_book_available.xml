@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:gravity="center"
+    android:layout_margin="20dp">
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Book Name"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textColor="@android:color/holo_red_dark"
+        android:textColorHint="@android:color/holo_green_light"
+        android:layout_marginTop="10dp"
+        android:id="@+id/addbooks_update_bookname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Author Name"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_author" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Publisher Name"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_publisher" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Account Number cann't be updated"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_accountno" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="ISBN"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_Isbn" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="D_ID"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_Did" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Rack Code"
+        android:gravity="center"
+        android:textColorHint="@android:color/holo_green_light"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/addbooks_update_rackcode" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:text="UPDATE BOOKS"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/background_curve"
+        android:id="@+id/addbooks_update_Button"/>
+
+
+</LinearLayout>
